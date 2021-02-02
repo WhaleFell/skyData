@@ -1,8 +1,8 @@
 '''
 Author: WhaleFall
 Date: 2021-02-01 10:57:20
-LastEditTime: 2021-02-01 23:11:13
-Description: sky光遇官网爬虫 可以获取全部！
+LastEditTime: 2021-02-02 09:23:25
+Description: sky光遇官网爬虫
 Url:https://game.163.com/star/sky/index.html 光遇博物馆
 '''
 import requests
