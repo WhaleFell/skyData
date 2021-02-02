@@ -1,7 +1,7 @@
 '''
 Author: WhaleFall
 Date: 2021-02-01 10:57:20
-LastEditTime: 2021-02-02 11:33:36
+LastEditTime: 2021-02-02 11:59:33
 Description: sky光遇官网爬虫
 Url:https://game.163.com/star/sky/index.html 光遇博物馆
 '''
@@ -40,7 +40,7 @@ def getContent(page):
     }
 
     try:
-        response = requests.get(url, data=data, headers=header).json()
+        response = requests.get(url, params=data, headers=header).json()
         # print(response)
         articles = response["data"]["articles"]
         if articles==[]:
