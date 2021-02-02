@@ -1,7 +1,7 @@
 '''
 Author: WhaleFall
 Date: 2021-02-01 10:57:20
-LastEditTime: 2021-02-02 09:23:25
+LastEditTime: 2021-02-02 11:33:36
 Description: sky光遇官网爬虫
 Url:https://game.163.com/star/sky/index.html 光遇博物馆
 '''
@@ -10,6 +10,9 @@ import csv
 import codecs  # 处理csv乱码
 import re
 import time  # 处理时间
+import sys # 获取脚本目录
+
+path=sys.path[0]
 
 # 获取当前时间 2021-01-23
 new_time = time.strftime("%Y-%m-%d")
@@ -104,7 +107,7 @@ def getContent(page):
 
 page = 0
 # 初始化csv
-with codecs.open("skyDate {}.csv".format(new_time), "w", encoding="utf_8_sig") as cvs_file:
+with codecs.open("{}//skyDate {}.csv".format(path,new_time), "w", encoding="utf_8_sig") as cvs_file:
 
     headers = ["title", "text", "tags", "name", "picList", "time"]  #表头
     writer = csv.DictWriter(cvs_file, headers)
@@ -116,7 +119,7 @@ while True:
     # if Data == "stop":
     #     print("[stop]获取到指定日期停止")
     #     break
-    with codecs.open("skyDate {}.csv".format(new_time), "a", encoding="utf_8_sig") as cvs_file:
+    with codecs.open("{}//skyDate {}.csv".format(path,new_time), "a", encoding="utf_8_sig") as cvs_file:
         writer = csv.DictWriter(cvs_file, headers)
         writer.writerows(Data)  #写入多行
     page = page + 60
