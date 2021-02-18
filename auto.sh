@@ -4,7 +4,7 @@ path_shell=$(dirname $(readlink -f "$0"))
 echo "脚本目录:"$path_shell""
 
 cd $path_shell
-# ./sky.py
+python3 sky.py
 
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
