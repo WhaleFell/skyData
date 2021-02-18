@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 '''
 Author: WhaleFall
 Date: 2021-02-01 10:57:20
@@ -46,6 +47,7 @@ def getContent(page):
         articles = response["data"]["articles"]
         if articles == []:
             print("全部采集完毕!")
+            sys.exit()
             return "全部采集完毕!"
     except Exception as e:
         print("[Eroor]响应信息:", response)
