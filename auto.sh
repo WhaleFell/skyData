@@ -26,6 +26,11 @@ if [ "$?" != "0" ];then
     exit 1
 fi
 
+# 强制同步远程仓库
+# git fetch --all
+# git reset --hard origin/master
+# git fetch
+
 
 
 
