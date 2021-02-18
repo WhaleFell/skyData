@@ -11,6 +11,11 @@ if [ "$?" != "0" ];then
     exit 1
 fi
 
+echo "##########初始化Git远程仓库#############"
+git config --global user.name "adminwhalefall"
+git config --global user.email "2734184475@qq.com"
+git remote add github git@github.com:adminwhalefall/skydata.git
+echo "##########提交GitHub#############"
 git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
