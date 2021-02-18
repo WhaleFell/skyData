@@ -1,8 +1,8 @@
 '''
 Author: whalefall
 Date: 2021-02-03 12:12:36
-LastEditors: whalefall
-LastEditTime: 2021-02-03 17:10:47
+LastEditors: Please set LastEditors
+LastEditTime: 2021-02-18 14:33:14
 Description: 读取生成的CVS文件 最好是多线程下载里边的图片 并自动归类到一个文件夹里边
 '''
 import codecs
@@ -93,7 +93,7 @@ def download(contentType, name, title, tags, url):
         raise TypeError("传入的类型参数错误!")
 
 
-download("txt", "hyy", "sas", "sa", "http://baidu.com")
+# download("txt", "hyy", "sas", "sa", "http://baidu.com")
 
 # 列出脚本目录下的文件 并匹配csv文件
 result = os.listdir(os.getcwd())

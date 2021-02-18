@@ -1,7 +1,7 @@
 '''
 Author: WhaleFall
 Date: 2021-02-01 10:57:20
-LastEditTime: 2021-02-02 11:59:33
+LastEditTime: 2021-02-17 15:28:26
 Description: sky光遇官网爬虫
 Url:https://game.163.com/star/sky/index.html 光遇博物馆
 '''
@@ -10,9 +10,10 @@ import csv
 import codecs  # 处理csv乱码
 import re
 import time  # 处理时间
-import sys # 获取脚本目录
+import sys  # 获取脚本目录
+import os
 
-path=sys.path[0]
+path = sys.path[0]
 
 # 获取当前时间 2021-01-23
 new_time = time.strftime("%Y-%m-%d")
@@ -43,14 +44,14 @@ def getContent(page):
         response = requests.get(url, params=data, headers=header).json()
         # print(response)
         articles = response["data"]["articles"]
-        if articles==[]:
+        if articles == []:
             print("全部采集完毕!")
             return "全部采集完毕!"
     except Exception as e:
         print("[Eroor]响应信息:", response)
         raise
 
-    DataAll = []  #所有数据
+    DataAll = []  # 所有数据
     # 取一个用户的主体数据
     for arts in articles:
         # print(arts)
@@ -58,7 +59,7 @@ def getContent(page):
 
         # 遍历取用户主体数据
         datas = arts['body']  # 用户主体数据里面的主体内容
-        picList = []  #储存图片链接
+        picList = []  # 储存图片链接
         for data in datas:
 
             content = data.get('fp_data')
@@ -71,7 +72,7 @@ def getContent(page):
 
         tags = arts['tags'][0]  # 标签
         title = arts['title']  # 标题
-        times = arts["publish_time"]  #时间
+        times = arts["publish_time"]  # 时间
         # print(times)
         # 正则写的好菜 处理时间 处理后:2021-01-23 12:53:43
         pat = re.compile(r"(.*?)T\d\d:\d\d:\d\d")
@@ -105,21 +106,40 @@ def getContent(page):
 
 # getContent(999999)
 
+# 先删除目录下的所有CVS文件
+# 列出脚本目录下的文件 并匹配csv文件
+result = os.listdir(os.getcwd())
+csvList=[]
+for csvFileName in result:
+    if ".csv" in csvFileName:
+        csv_path = os.path.join(os.getcwd(), csvFileName)
+        csvList.append(csv_path)
+
+print("在脚本目录找到的.CSV文件:{}".format(csvList))
+
+if csvList==[]:
+    print("[Error]目录下暂无.CVS文件")
+else:
+    for csvName in csvList:
+        os.remove(csvName)
+    print("[Suc]删除目录下的CSV文件成功!")
+
+
 page = 0
 # 初始化csv
-with codecs.open("{}//skyDate {}.csv".format(path,new_time), "w", encoding="utf_8_sig") as cvs_file:
+with codecs.open("{}//skyDate {}.csv".format(path, new_time), "w", encoding="utf_8_sig") as cvs_file:
 
-    headers = ["title", "text", "tags", "name", "picList", "time"]  #表头
+    headers = ["title", "text", "tags", "name", "picList", "time"]  # 表头
     writer = csv.DictWriter(cvs_file, headers)
-    writer.writeheader()  #写表头
+    writer.writeheader()  # 写表头
 
 while True:
     print("[suc]获取第{}条数据".format(page))
-    Data = getContent(page)  #字典数据
+    Data = getContent(page)  # 字典数据
     # if Data == "stop":
     #     print("[stop]获取到指定日期停止")
     #     break
-    with codecs.open("{}//skyDate {}.csv".format(path,new_time), "a", encoding="utf_8_sig") as cvs_file:
+    with codecs.open("{}//skyDate {}.csv".format(path, new_time), "a", encoding="utf_8_sig") as cvs_file:
         writer = csv.DictWriter(cvs_file, headers)
-        writer.writerows(Data)  #写入多行
+        writer.writerows(Data)  # 写入多行
     page = page + 60
