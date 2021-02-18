@@ -1,7 +1,7 @@
 <!--
  * @Author: WhaleFall
  * @Date: 2021-02-02 10:58:16
- * @LastEditTime: 2021-02-18 20:07:14
+ * @LastEditTime: 2021-02-18 20:19:05
  * @Description: 自述文件
 -->
 # 光遇官网——光遇博物馆爬虫脚本
@@ -9,6 +9,17 @@
 ![献祭完的图片](https://i.loli.net/2021/02/02/lsPKiMowSvn94Ic.jpg)
 ![禁阁终点](https://i.loli.net/2021/02/02/qRJpxn52VYBuAKf.png)
 > 感恩季 追光季 归属季 凛冬季 魔法季 圣岛季 预言季 很荣幸能陪光遇走到现在，还有那些温柔的人 这一年多 有笑 有泪 不管怎样，我永远不会忘记我在这里度过的时光，开完好友树的，只开了对话的，只加了好友的，甚至是点亮过的小黑，很高兴认识你们，这一路承蒙照顾 真的很爱光遇,祝光遇越来越好，陈老师加油!
+## 运行
+1. 一定要在 `python3.X` 环境下运行本项目
+2. 运行前请安装项目依赖的模块:
+   `pip install -r requriements.txt `
+3. Linux运行:`sudo python3 sky.py`
+4. 
+    ```shell
+    sudo python3 sky.py # 获取CSV文件
+    sudo python3 download.py #下载
+    sudo python3 api.py # api模块
+    ```
 ## 爬取部分
 - 1. **爬取页面--光遇博物馆**
   > https://game.163.com/star/sky/index.html
@@ -74,11 +85,6 @@
   }
   ```
 - 直接重定向到图片地址: **GET POST** `/sky/pic/`
-## 运行
-1. 一定要在 `python3.X` 环境下运行本项目
-2. 运行前请安装requests模块:
-   `pip3 install requests`
-3. Linux运行:`sudo python3 sky.py`
 ## TODO
 - [ ] 添加`crantab`自动运行和自动提交`Git`的`shell` **脚本** 每天自动更新提交到`GitHub`
 - [X] ~~添加 **下载列表中的图片功能** ,并把图片按文件夹**归类**~~ (2021.2.5已完成)
