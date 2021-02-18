@@ -14,6 +14,7 @@ fi
 echo "##########初始化Git远程仓库#############"
 git config --global user.name "adminwhalefall"
 git config --global user.email "2734184475@qq.com"
+git remote rm github
 git remote add github git@github.com:adminwhalefall/skydata.git
 echo "##########提交GitHub#############"
 git add .
