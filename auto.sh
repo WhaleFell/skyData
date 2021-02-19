@@ -7,6 +7,14 @@ echo "脚本目录:"$path_shell""
 cd $path_shell
 # python3 sky.py
 
+urlquote()
+{
+    local msg=`echo "$*"|od -t x1 -A n|xargs|tr -d '*'|tr " " %`  #使用od转换为16进制，同时把空格换成%，正好实现了url编码。
+    msg=${msg/$msg/%$msg}  #加上头部缺少的%
+    echo ${msg%\%0a}  #去掉最后多余的%oa。od生成的。
+}
+
+
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
     exit 1
@@ -26,12 +34,14 @@ cat /ectas/sasasa
 if [ "$?" != "0" ];then
     content=""${time}"\n[skyData]推送到GitHub出现错误!\n"${git_log}""
     echo ${content}
-    curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
+    url=urlquote("https://push.xuthus.cc/send/"${token}"?c="${content}"")
+    curl url
     exit 1
 elif [ "$?" == "0" ];then
     content=""${time}"\n[skyData]推送到GitHub成功啦!\n"${git_log}""
     echo ${content}
-    curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
+    url=urlquote("https://push.xuthus.cc/send/"${token}"?c="${content}"")
+    curl url
     exit 1
 fi
 
