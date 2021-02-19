@@ -1,7 +1,7 @@
 <!--
  * @Author: WhaleFall
  * @Date: 2021-02-02 10:58:16
- * @LastEditTime: 2021-02-18 20:19:05
+ * @LastEditTime: 2021-02-19 22:49:00
  * @Description: 自述文件
 -->
 # 光遇官网——光遇博物馆爬虫脚本
@@ -86,12 +86,22 @@
   ```
 - 直接重定向到图片地址: **GET POST** `/sky/pic/`
 ## 自动提交shell部分
-> 参见 **![](./sxys)**
+> 参见 **[auto.sh](./auto.sh)**
+- Linux 下使用crontab实现 **自动运行**
+  > 安利一个很好用的crontab [表达式生成工具](https://qqe2.com/cron)
 
+  ```shell
+  sudo apt-get install crontabs
+  # 用普通用户执行
+  crontab -l # 查看
+  crontab -e # 编辑
+  # 添加
+  30 15 0 * * ? * pi /home/pi/skyData/auto.sh
+  ```
 ## TODO
-- [ ] 添加`crantab`自动运行和自动提交`Git`的`shell` **脚本** 每天自动更新提交到`GitHub`
+- [X] ~~添加`crantab`自动运行和自动提交`Git`的`shell` **脚本** 每天自动更新提交到`GitHub`~~(2020.2.19基本完成 **要开学了 嘤嘤嘤**)
 - [X] ~~添加 **下载列表中的图片功能** ,并把图片按文件夹**归类**~~ (2021.2.5已完成)
-- [ ] 爬取更多有关`Sky·光遇`的东西
+- [ ] 爬取更多有关`Sky·光遇`的东西 (打算爬取 **光遇手游weibo**)
 - [X] ~~用Python Flask模块开发个 **光遇随机图api**~~(2021.2.18已完成)
 ## 后
 - 此项目由一个**初中生**开发,仅供**学习用途**
