@@ -35,6 +35,7 @@ if [ "$?" != "0" ];then
     content=""${time}"\n[skyData]推送到GitHub出现错误!\n"${git_log}""
     echo ${content}
     url=urlquote "https://push.xuthus.cc/send/"${token}"?c="${content}""
+    echo $url
     curl "$url"
     exit 1
 elif [ "$?" == "0" ];then
