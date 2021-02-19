@@ -14,8 +14,8 @@ log = sys.argv[3]
 
 url = "https://push.xuthus.cc/send/%s" % (token)
 
-if status == "Trur":
-    content = "[SkyData] \n%s 自动提交skyCSV成功" % (time)
+if status == "True":
+    content = "[SkyData] \n%s 自动提交skyCSV成功!\nGit信息:%s" % (time,log)
 elif status == "False":
     content = "[SkyData] \n%s 自动提交skyCSV失败!错误信息:\n%s" % (time, log)
 else:
