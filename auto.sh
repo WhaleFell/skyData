@@ -11,7 +11,7 @@ echo "###################获取完成####################"
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
     time=$(date "+%Y-%m-%d %H:%M:%S")
-    python3 pull.py "False" ${time} ${py_log}
+    python3 push.py "False" ${time} ${py_log}
     exit 1
 fi
 
@@ -32,7 +32,7 @@ if [ "$?" != "0" ];then
     exit 1
 else
     echo $git_log
-    python3 pull.py "True" ${time} ${git_log}
+    python3 push.py "True" ${time} ${git_log}
     exit 1
 fi
 
