@@ -24,17 +24,24 @@ echo "##########提交GitHub#############"
 git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
-git_log=$(git push -u github master 2>&1)
 
-if [ "$?" != "0" ];then
-    echo $git_log
-    python3 push.py "False" "${time}" "${git_log}"
-    exit 1
-else
-    echo $git_log
-    python3 push.py "True" "${time}" "${git_log}"
-    exit 1
-fi
+while (( $i<=10 ))
+do
+    git_log=$(git push -u github master 2>&1)
+    if [ "$?" != "0" ];then
+        echo "#############尝试第"$i"次##################"
+        echo $git_log
+        exit 1
+    else
+        echo $git_log
+        python3 push.py "True" "${time}" "${git_log}"
+        exit 1
+    fi
+    let "i++"
+done
+
+python3 push.py "False" "${time}" "${git_log}"
+
 
 # 强制同步远程仓库
 # git fetch --all
