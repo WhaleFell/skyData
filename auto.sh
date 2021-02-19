@@ -25,7 +25,8 @@ git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
 
-while (( $i<=10 ))
+i=0
+while (( $i <= 10 ))
 do
     git_log=$(git push -u github master 2>&1)
     if [ "$?" != "0" ];then
