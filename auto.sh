@@ -23,7 +23,13 @@ time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
 git_log=$(git push -u github master 2>&1)
 if [ "$?" != "0" ];then
-    content=""${time}"\n推送到GitHub出现错误!\n"${git_log}""
+    content=""${time}"\n[skyData]推送到GitHub出现错误!\n"${git_log}""
+    echo ${content}
+    curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
+    exit 1
+elif [ "$?" == "0" ] 
+then
+    content=""${time}"\n[skyData]推送到GitHub成功啦!\n"${git_log}""
     echo ${content}
     curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
     exit 1
