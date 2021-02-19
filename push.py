@@ -7,7 +7,7 @@ token = "92f83d0596c7b553ea1df9f242e4fc46"
 
 status = sys.argv[1]
 time = sys.argv[2]
-log = sys.argv[2]
+log = sys.argv[3]
 
 url = "https://push.xuthus.cc/send/%s" % (token)
 
