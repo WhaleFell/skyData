@@ -27,8 +27,7 @@ if [ "$?" != "0" ];then
     echo ${content}
     curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
     exit 1
-elif [ "$?" == "0" ] 
-then
+elif [ "$?" == "0" ];then
     content=""${time}"\n[skyData]推送到GitHub成功啦!\n"${git_log}""
     echo ${content}
     curl "https://push.xuthus.cc/send/"${token}"?c="${content}""
