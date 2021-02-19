@@ -36,7 +36,7 @@ if [ "$?" != "0" ];then
     echo ${content}
     # url="https://push.xuthus.cc/send/"${token}"?c="${content}""
     # echo $url
-    curl -d $'[skyData]'${time}' \n 推送到GitHub出现错误! \n '${git_log}'' "https://push.xuthus.cc/send/"${token}""
+    curl -d $'[skyData]'${time}' '\n 推送到GitHub出现错误! \n' '${git_log}'' "https://push.xuthus.cc/send/"${token}""
     exit 1
 elif [ "$?" == "0" ];then
     content="[skyData]"${time}"\n推送到GitHub成功啦!\n"${git_log}""
