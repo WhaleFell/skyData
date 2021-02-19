@@ -5,11 +5,12 @@ path_shell=$(dirname $(readlink -f "$0"))
 echo "脚本目录:"$path_shell""
 
 cd $path_shell
-# python3 sky.py
-
+py_log=$(python3 sky.py)
 
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
+    time=$(date "+%Y-%m-%d %H:%M:%S")
+    python3 pull.py "False" ${time} ${py_log}
     exit 1
 fi
 
