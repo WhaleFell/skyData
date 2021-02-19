@@ -7,13 +7,6 @@ echo "脚本目录:"$path_shell""
 cd $path_shell
 # python3 sky.py
 
-urlquote()
-{
-    local msg=`echo "$*"|od -t x1 -A n|xargs|tr -d '*'|tr " " %`  #使用od转换为16进制，同时把空格换成%，正好实现了url编码。
-    msg=${msg/$msg/%$msg}  #加上头部缺少的%
-    echo ${msg%\%0a}  #去掉最后多余的%oa。od生成的。
-}
-
 
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
@@ -32,17 +25,10 @@ git commit -m "${time} 自动更新提交Sky_CSV文件"
 # git_log=$(git push -u github master 2>&1)
 git_log=$(cat /ectas/sasasa 2>&1)
 if [ "$?" != "0" ];then
-    content=$'[skyData]'${time}' \n 推送到GitHub出现错误! \n '${git_log}''
-    echo ${content}
-    # url="https://push.xuthus.cc/send/"${token}"?c="${content}""
-    # echo $url
-    curl -d $content "https://push.xuthus.cc/send/"${token}""
+    python3 pull.py "False" ${time} ${git_log}
     exit 1
 elif [ "$?" == "0" ];then
-    content="[skyData]"${time}"\n推送到GitHub成功啦!\n"${git_log}""
-    echo -e ${content}
-    url=urlquote "https://push.xuthus.cc/send/"${token}"?c="${content}""
-    curl "$url"
+    python3 pull.py "True" ${time} ${git_log}
     exit 1
 fi
 
