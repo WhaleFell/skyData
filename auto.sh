@@ -6,6 +6,7 @@ echo "脚本目录:"$path_shell""
 
 cd $path_shell
 py_log=$(python3 sky.py)
+echo "###################获取完成####################"
 
 if [ "$?" != "0" ];then
     echo "运行 sky.py 出现错误!"
@@ -29,7 +30,7 @@ if [ "$?" != "0" ];then
     echo $git_log
     python3 push.py "False" "${time}" "${git_log}"
     exit 1
-elif [ "$?" == "0" ];then
+else
     echo $git_log
     python3 pull.py "True" ${time} ${git_log}
     exit 1
