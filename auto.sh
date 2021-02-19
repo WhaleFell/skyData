@@ -33,7 +33,7 @@ git commit -m "${time} 自动更新提交Sky_CSV文件"
 git_log=$(cat /ectas/sasasa 2>&1)
 if [ "$?" != "0" ];then
     content="[skyData]"${time}"\n 推送到GitHub出现错误!\n "${git_log}""
-    echo -e ${content}
+    echo ${content}
     # url="https://push.xuthus.cc/send/"${token}"?c="${content}""
     # echo $url
     curl -d "c="${content}"" "https://push.xuthus.cc/send/"${token}""
