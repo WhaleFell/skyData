@@ -34,7 +34,7 @@ git_log=$(cat /ectas/sasasa)
 if [ "$?" != "0" ];then
     content="[skyData]"${time}"推送到GitHub出现错误!"${git_log}""
     echo ${content}
-    url=urlquote "https://push.xuthus.cc/send/"${token}"?c="${content}""
+    url="https://push.xuthus.cc/send/"${token}"?c="${content}""
     echo $url
     curl "$url"
     exit 1
