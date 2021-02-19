@@ -30,16 +30,16 @@ git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
 # git_log=$(git push -u github master 2>&1)
-cat /ectas/sasasa
+git_log=$(cat /ectas/sasasa)
 if [ "$?" != "0" ];then
-    content=""${time}"[skyData]推送到GitHub出现错误!"${git_log}""
+    content="[skyData]"${time}"推送到GitHub出现错误!"${git_log}""
     echo ${content}
     url=urlquote "https://push.xuthus.cc/send/"${token}"?c="${content}""
     echo $url
     curl "$url"
     exit 1
 elif [ "$?" == "0" ];then
-    content=""${time}"\n[skyData]推送到GitHub成功啦!\n"${git_log}""
+    content="[skyData]"${time}"推送到GitHub成功啦!"${git_log}""
     echo ${content}
     url=urlquote "https://push.xuthus.cc/send/"${token}"?c="${content}""
     curl "$url"
