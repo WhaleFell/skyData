@@ -9,6 +9,9 @@ status = sys.argv[1]
 time = sys.argv[2]
 log = sys.argv[3]
 
+# print(status,time,log)
+# sys.exit()
+
 url = "https://push.xuthus.cc/send/%s" % (token)
 
 if status == "Trur":

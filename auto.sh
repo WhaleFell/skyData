@@ -21,13 +21,17 @@ git remote add github git@github.com:adminwhalefall/skydata.git
 echo "##########提交GitHub#############"
 git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
-git commit -m "${time} 自动更新提交Sky_CSV文件"
+# git commit -m "${time} 自动更新提交Sky_CSV文件"
 # git_log=$(git push -u github master 2>&1)
-git_log=$(cat /ectas/sasasa 2>&1)
+git_log=$(cat /ectas/sasasa56565656 2>&1)
+
+
 if [ "$?" != "0" ];then
-    python3 push.py "False" ${time} ${git_log}
+    echo $git_log
+    python3 push.py "False" "${time}" "${git_log}"
     exit 1
 elif [ "$?" == "0" ];then
+    echo $git_log
     python3 pull.py "True" ${time} ${git_log}
     exit 1
 fi
