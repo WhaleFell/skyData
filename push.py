@@ -18,6 +18,6 @@ elif status == "False":
 else:
     raise TypeError("参数有误")
 
-data = "%s".encode('utf-8') % (content)
-res = requests.post(url=url, data=data)
+data = "%s" % (content)
+res = requests.post(url=url, data=data.encode('utf-8'))
 print(res.text)
