@@ -1,6 +1,4 @@
 #!/bin/bash
-# 酷推token
-token="92f83d0596c7b553ea1df9f242e4fc46"
 path_shell=$(dirname $(readlink -f "$0"))
 echo "脚本目录:"$path_shell""
 
@@ -25,20 +23,21 @@ git add .
 time=$(date "+%Y-%m-%d %H:%M:%S")
 git commit -m "${time} 自动更新提交Sky_CSV文件"
 
-i=0
-while (( $i <= 10 ))
+t=0
+while (( $t <= 10 ))
 do
     git_log=$(git push -u github master 2>&1)
+    # git_log=$(cat /sassass/sas 2>&1)
     if [ "$?" != "0" ];then
         echo "#############尝试第"$i"次##################"
         echo $git_log
-        exit 1
+        # exit 1
     else
         echo $git_log
         python3 push.py "True" "${time}" "${git_log}"
         exit 1
     fi
-    let "i++"
+    let "t++"
 done
 
 python3 push.py "False" "${time}" "${git_log}"
@@ -49,7 +48,7 @@ python3 push.py "False" "${time}" "${git_log}"
 # git reset --hard origin/master
 # git fetch
 
-
+# 请使用 /bin/bash 运行！这是一个极大的坑点
 
 
 
