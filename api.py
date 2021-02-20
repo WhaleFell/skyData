@@ -39,7 +39,7 @@ def readCSV(path):
     try:
         df = pd.read_csv(path)
     except Exception as e:
-        print(e)
+        print("[Error]读取CSV文件时出现错误 %s" % (e))
     # index_num = df.shape[0]  # 取出总行数
     index_num = len(df.index)
     rand = random.randint(1, index_num)
