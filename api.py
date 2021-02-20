@@ -35,7 +35,11 @@ def getCsvPath():
 
 
 def readCSV(path):
-    df = pd.read_csv(path)
+    # print(path)
+    try:
+        df = pd.read_csv(path)
+    except Exception as e:
+        print(e)
     # index_num = df.shape[0]  # 取出总行数
     index_num = len(df.index)
     rand = random.randint(1, index_num)
