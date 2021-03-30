@@ -401,3 +401,12 @@ To github.com:AdminWhaleFall/skyData.git 07133d8..8251b0e master -> master 分�
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master 2e64baa] 2021-03-30 00:15:26 自动更新提交Sky_CSV文件
+ 2 files changed, 9 insertions(+)
+ rename skyDate 2021-03-29.csv => skyDate 2021-03-30.csv (100%)
+To github.com:AdminWhaleFall/skyData.git 8251b0e..2e64baa master -> master 分支 'master' 设置为跟踪来自 'github' 的远程分支 'master'。
+{"code":200,"message":"ok","message_1":null,"data":null}
+脚本目录:/home/pi/skydata
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
