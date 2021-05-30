@@ -1546,3 +1546,34 @@ UnboundLocalError: local variable 'response' referenced before assignment
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master 92ca33c] 2021-05-30 00:15:02 自动更新提交Sky_CSV文件
+ 3 files changed, 70 insertions(+), 4774 deletions(-)
+ delete mode 100644 skyDate 2021-05-29.csv
+ create mode 100644 skyDate 2021-05-30.csv
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+{"code":200,"message":"ok","send_content":null,"data":null}
+脚本目录:/home/pi/skydata
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
