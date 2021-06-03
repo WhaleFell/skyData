@@ -1693,3 +1693,12 @@ error: 写入新的配置文件 /home/pi/skydata/.git/config.lock 失败 error: 
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master 79e2b84] 2021-06-03 00:15:29 自动更新提交Sky_CSV文件
+ 2 files changed, 246 insertions(+), 129 deletions(-)
+ rename skyDate 2021-06-01.csv => skyDate 2021-06-03.csv (96%)
+To github.com:AdminWhaleFall/skyData.git 2674306..79e2b84 master -> master 分支 'master' 设置为跟踪来自 'github' 的远程分支 'master'。
+{"code":200,"message":"ok","send_content":null,"data":null}
+脚本目录:/home/pi/skydata
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
