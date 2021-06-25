@@ -2176,3 +2176,30 @@ requests.exceptions.ConnectionError: ('Connection aborted.', OSError("(110, 'ETI
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master 3c4e749] 2021-06-25 00:19:56 自动更新提交Sky_CSV文件
+ 2 files changed, 184 insertions(+)
+ rename skyDate 2021-06-24.csv => skyDate 2021-06-25.csv (100%)
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.229.188.59 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 52.74.223.119 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.250.177.223 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.229.188.59 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.250.177.223 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 52.74.223.119 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 52.74.223.119 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.250.177.223 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.250.177.223 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh_dispatch_run_fatal: Connection to 13.250.177.223 port 22: Connection timed out fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+脚本目录:/home/pi/skydata
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
