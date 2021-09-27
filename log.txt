@@ -3112,3 +3112,12 @@ To github.com:AdminWhaleFall/skyData.git b51a2da..59a7261 master -> master 分�
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master b7bfbc2] 2021-09-27 00:15:34 自动更新提交Sky_CSV文件
+ 2 files changed, 9 insertions(+)
+ rename skyDate 2021-09-26.csv => skyDate 2021-09-27.csv (100%)
+To github.com:AdminWhaleFall/skyData.git 59a7261..b7bfbc2 master -> master 分支 'master' 设置为跟踪来自 'github' 的远程分支 'master'。
+{"code":500,"message":"Post \"http://127.0.0.1:5718/send_private_msg\": dial tcp 127.0.0.1:5718: connect: connection refused","send_content":null,"data":{"Op":"Post","URL":"http://127.0.0.1:5718/send_private_msg","Err":{"Op":"dial","Net":"tcp","Source":null,"Addr":{"IP":"127.0.0.1","Port":5718,"Zone":""},"Err":{"Syscall":"connect","Err":111}}}}
+脚本目录:/home/pi/skydata
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
