@@ -3430,3 +3430,144 @@ UnboundLocalError: local variable 'response' referenced before assignment
 ###################获取完成####################
 ##########初始化Git远程仓库#############
 ##########提交GitHub#############
+[master 360af29] 2021-10-26 00:15:02 自动更新提交Sky_CSV文件
+ 3 files changed, 70 insertions(+), 5056 deletions(-)
+ delete mode 100644 skyDate 2021-10-24.csv
+ create mode 100644 skyDate 2021-10-26.csv
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+#############尝试第次##################
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution fatal: 无法读取远程仓库。 请确认您有正确的访问权限并且仓库存在。
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.7/socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 841, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e4eef98>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='push.xuthus.cc', port=443): Max retries exceeded with url: /send/92f83d0596c7b553ea1df9f242e4fc46 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e4eef98>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "push.py", line 25, in <module>
+    res = requests.post(url=url, data=data.encode('utf-8'))
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='push.xuthus.cc', port=443): Max retries exceeded with url: /send/92f83d0596c7b553ea1df9f242e4fc46 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f8e4eef98>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+脚本目录:/home/pi/skydata
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 841, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7fae3612b0>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='kol.tongren.163.com', port=443): Max retries exceeded with url: /article/?sort=new&game=%E5%85%89%E9%81%87&random_hot_value=10&span=60&start=0 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fae3612b0>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sky.py", line 45, in getContent
+    response = requests.get(url, params=data, headers=header).json()
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='kol.tongren.163.com', port=443): Max retries exceeded with url: /article/?sort=new&game=%E5%85%89%E9%81%87&random_hot_value=10&span=60&start=0 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fae3612b0>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sky.py", line 140, in <module>
+    Data = getContent(page)  # 字典数据
+  File "sky.py", line 53, in getContent
+    print("[Eroor]响应信息:", response)
+UnboundLocalError: local variable 'response' referenced before assignment
+###################获取完成####################
+##########初始化Git远程仓库#############
+##########提交GitHub#############
